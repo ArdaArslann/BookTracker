@@ -1,0 +1,69 @@
+@import "tailwindcss";
+/* Every string on this site is English — latin subset only, not the full unicode set. */
+@import "@fontsource/ibm-plex-sans/latin-400.css";
+@import "@fontsource/ibm-plex-sans/latin-500.css";
+@import "@fontsource/ibm-plex-sans/latin-600.css";
+@import "@fontsource/ibm-plex-sans/latin-700.css";
+@import "@fontsource/ibm-plex-mono/latin-400.css";
+@import "@fontsource/ibm-plex-mono/latin-500.css";
+@import "@fontsource/ibm-plex-mono/latin-600.css";
+
+/* Reading Journal Ledger — direction contract in .impeccable/surfaces/app.md (seed 1550477b) */
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  --color-paper: #f6f1e2;
+  --color-paper-raised: #fbf8ee;
+  --color-ink: #2b2620;
+  --color-ink-soft: #5c5346;
+  --color-ink-blue: #35507a;
+  --color-rule: #c7d0de;
+  --color-rule-soft: #dbe1ea;
+  --color-accent: #a23e27;
+  --color-accent-strong: #7c2e1c;
+  --color-accent-soft: #f1ded4;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background-color: var(--color-accent-soft);
+    color: var(--color-accent-strong);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ink-blue);
+    outline-offset: 2px;
+    border-radius: 1px;
+  }
+
+  * {
+    scrollbar-color: var(--color-ink-blue) var(--color-paper);
+    scrollbar-width: thin;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-paper);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-ink-blue);
+    border-radius: 999px;
+    border: 2px solid var(--color-paper);
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}

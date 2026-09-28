@@ -1,0 +1,9 @@
+node_modules
+dist
+coverage
+package-lock.json
+
+# Knowledge base has its own formatting conventions (tight {{placeholder}}
+# braces, no blank line after H1) maintained by the knowledge-extraction
+# step — the app's Prettier config must never rewrite it.
+knowledge
